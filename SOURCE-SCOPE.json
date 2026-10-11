@@ -3,8 +3,8 @@
   "scope": "partial_source_review",
   "repositoryHistory": "not_included",
   "verification": {
-    "tests": 25,
-    "execution": "offline synthetic SDK and exact arithmetic tests; not mainnet settlement"
+    "tests": 27,
+    "execution": "offline synthetic SDK purchase-bound, instruction-order and exact arithmetic tests; not mainnet settlement"
   },
   "files": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4173,
-      "sha256": "fef874219070d6f64bf2e57823f2efb7ade196bebfc6482fdbdcaf2977df5525"
+      "bytes": 5316,
+      "sha256": "06260e05e735a9a87447a1db05cc9dc8cd16bd17d30d44da00fdbff7d313b860"
     },
     {
       "path": "NOTICE.md",
@@ -39,28 +39,28 @@
     },
     {
       "path": "docs/ARCHITECTURE.md",
-      "bytes": 2548,
-      "sha256": "1fe040f4dcbbab930d98e886f8cc0c9180fc90edfea93fc9045c996bda93d7c7"
+      "bytes": 3456,
+      "sha256": "708a513534a456821081e9d0816b39ba785ff018843c82e757d96f71a61f7558"
     },
     {
       "path": "docs/DBC-INTEGRATION.md",
-      "bytes": 4109,
-      "sha256": "e7440c3a948be7abd5a999a459f219c9faac00073b4cb018dd758e5e65ad04e1"
+      "bytes": 4373,
+      "sha256": "7d68cb76f73891b5adf872c0ee672984127eb089d4b1c270bc46d84190cb83dc"
     },
     {
       "path": "docs/REVIEW-SCOPE.md",
-      "bytes": 2738,
-      "sha256": "8385647433443e1aa43b0d55ea39a3a527dcaf13514f782cf82b915c13dde8e1"
+      "bytes": 3053,
+      "sha256": "2664b817f07c659bb3ebde923d77451fdb3d0649da08a4344e1870846562e7df"
     },
     {
       "path": "src/prepare-community-launch.ts",
-      "bytes": 2281,
-      "sha256": "3f13c9db74cf2cb61304f779931c23725fc2c4eabad8944a877a46c425800b34"
+      "bytes": 2221,
+      "sha256": "5e2bc884f8970041321ff5bf75c3b80a8849a2291b3fd46e08aa3e47d6c3ac27"
     },
     {
       "path": "src/launch-initial-buy.ts",
-      "bytes": 1869,
-      "sha256": "7ea54e68685c679b16d72764a09f80f870a4e59cdf54cc3eac790458582fd156"
+      "bytes": 2848,
+      "sha256": "42d9fc15685741a1ed88e3e480b4ccd8f9e12ddf47acbf5975f619c68c1a765c"
     },
     {
       "path": "src/meteora-config-policy.ts",
@@ -94,8 +94,8 @@
     },
     {
       "path": "tests/dbc-launch.test.ts",
-      "bytes": 4550,
-      "sha256": "f71fe4031a16f9776a324d2ea0b81f7b9d3f09bbebeae53537470b7254c54a3f"
+      "bytes": 5815,
+      "sha256": "24090d334957ccc18c0cd62e13bc84f3add18e3acb7e743f355ba9f7e5a1bb77"
     },
     {
       "path": "tests/fee-allocation.test.ts",
