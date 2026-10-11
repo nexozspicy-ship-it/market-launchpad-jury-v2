@@ -26,20 +26,20 @@ export async function prepareCommunityLaunch(client: DynamicBondingCurveClient, 
   const config = await client.state.getPoolConfig(input.configAddress);
   if (!config) throw new Error('The reviewed community pool configuration is unavailable.');
   assertBusinessLaunchConfig(config, input.expectedTreasury.toBase58());
-  const purchase = buyLamports ? quoteInitialBuy(client, config, buyLamports) : null;
+  const purchase = quoteInitialBuy(client, config, buyLamports);
   const transaction = await client.creator.createPoolWithFirstBuy({
     createPoolParam: {
       baseMint: input.mint, config: input.configAddress, payer: input.creator,
       poolCreator: input.creator, name: input.name, symbol: input.symbol, uri: input.metadataUri,
     },
-    firstBuyParam: purchase ? {
+    firstBuyParam: {
       buyer: input.creator, receiver: input.creator, buyAmount: purchase.amount,
       minimumAmountOut: purchase.minimum, referralTokenAccount: null,
-    } : undefined,
+    },
   });
   return {
     transaction, config, pool: deriveDbcPoolAddress(NATIVE_MINT, input.mint, input.configAddress),
-    buyLamports, expectedTokens: purchase?.expected.toString() ?? '0',
-    minimumTokens: purchase?.minimum.toString() ?? '0',
+    buyLamports, expectedTokens: purchase.expected.toString(),
+    minimumTokens: purchase.minimum.toString(),
   };
 }
