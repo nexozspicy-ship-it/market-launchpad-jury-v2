@@ -11,7 +11,7 @@ The protocol name **Dynamic Bonding Curve** does not mean that Market enables dy
 | Module | Role |
 | --- | --- |
 | `src/prepare-community-launch.ts` | Unsigned extraction of the application's actual `createPoolWithFirstBuy` construction. No signer or submission method. |
-| `src/launch-initial-buy.ts` | Exact decimal-SOL input, quote for the empty curve, 100 bps slippage bound, capacity rejection. |
+| `src/launch-initial-buy.ts` | Exact 0.1–2 SOL input and runtime-cap validation, quote for the empty curve, 100 bps slippage bound, capacity rejection. |
 | `src/business-live-policy.ts` | Community configuration checks: fixed fee, SOL quote and approved destination supplied by the caller. |
 | `src/meteora-config-policy.ts` | Fee and migration parameter validation. |
 | `src/registered-fee-policy.ts` | Selected V3/V4 manual accounting rules for current registered launches. |
@@ -21,17 +21,17 @@ The protocol name **Dynamic Bonding Curve** does not mean that Market enables dy
 
 The helper's inputs are caller-supplied public keys and metadata, not embedded production account settings. In the complete app, metadata validation, access control, transaction simulation, wallet review and confirmation surround this construction. Those services are outside this export.
 
-## Creation and optional first purchase
+## Creation and required first purchase
 
 1. Read the requested pool configuration and check its fee/quote routing.
-2. Parse the optional purchase in lamports without floating-point arithmetic.
+2. Parse the required purchase in lamports without floating-point arithmetic. Reject less than 0.1 SOL, more than 2 SOL, or more than a narrower runtime cap. Account setup and network fees are separate from this purchase amount.
 3. Obtain a quote from the pinned SDK using the initial curve configuration. Reject a zero-output or partially filled input.
-4. Call `client.creator.createPoolWithFirstBuy` once with the pool parameters and optional purchase parameters.
+4. Call `client.creator.createPoolWithFirstBuy` once with the pool parameters and the first-purchase parameters.
 5. Return the unsigned transaction and derived DBC pool address for the application's simulation and review.
 
-The same transaction contains creation before the initial buy. There is no separately broadcast pool-creation transaction in this helper. Atomic construction does not guarantee submission, confirmation or exclusion of later transactions.
+The same transaction contains creation before the required initial buy. There is no separately broadcast pool-creation transaction in this helper. Atomic construction does not guarantee submission, confirmation or exclusion of later transactions.
 
-The offline tests decode the real SDK-generated DBC instructions, check input/minimum output and measure the unsigned transaction against Solana's 1,232-byte packet limit. They also verify the no-purchase case and reject a mismatched fee destination.
+The offline tests decode the real SDK-generated DBC instructions, check input/minimum output and measure the unsigned transaction against Solana's 1,232-byte packet limit. They also reject missing or below-minimum purchases before any configuration read, validate runtime purchase caps and reject a mismatched fee destination.
 
 ## Fee attribution
 
