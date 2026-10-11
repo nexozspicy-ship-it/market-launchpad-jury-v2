@@ -1,0 +1,136 @@
+{
+  "snapshotDate": "2026-10-11",
+  "scope": "partial_source_review",
+  "repositoryHistory": "not_included",
+  "verification": {
+    "tests": 25,
+    "execution": "offline synthetic SDK and exact arithmetic tests; not mainnet settlement"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 64,
+      "sha256": "1d3490e3c4d983291f5e9b65d14e968bff46ca9c295b98a18f72275fc7a7178c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4173,
+      "sha256": "fef874219070d6f64bf2e57823f2efb7ade196bebfc6482fdbdcaf2977df5525"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 819,
+      "sha256": "85d552a18e272974ec921f8b9c4af888d2900059818a8480aa10fdd3c6a762ed"
+    },
+    {
+      "path": "package.json",
+      "bytes": 746,
+      "sha256": "a337be3ce17a44eaee7c22fab23b01aac353691c94d2e497a4d97eabe4e66498"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 38426,
+      "sha256": "46338fc88e92ab9fc39d247197af38e2c7e2f3bb16e83864bcdb5b555f6ce9fd"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 321,
+      "sha256": "46581571150ab07da3f16ed9c9d1b7f606c4ef17d6cca85ccb3785ab9543f083"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 2548,
+      "sha256": "1fe040f4dcbbab930d98e886f8cc0c9180fc90edfea93fc9045c996bda93d7c7"
+    },
+    {
+      "path": "docs/DBC-INTEGRATION.md",
+      "bytes": 4109,
+      "sha256": "e7440c3a948be7abd5a999a459f219c9faac00073b4cb018dd758e5e65ad04e1"
+    },
+    {
+      "path": "docs/REVIEW-SCOPE.md",
+      "bytes": 2738,
+      "sha256": "8385647433443e1aa43b0d55ea39a3a527dcaf13514f782cf82b915c13dde8e1"
+    },
+    {
+      "path": "src/prepare-community-launch.ts",
+      "bytes": 2281,
+      "sha256": "3f13c9db74cf2cb61304f779931c23725fc2c4eabad8944a877a46c425800b34"
+    },
+    {
+      "path": "src/launch-initial-buy.ts",
+      "bytes": 1869,
+      "sha256": "7ea54e68685c679b16d72764a09f80f870a4e59cdf54cc3eac790458582fd156"
+    },
+    {
+      "path": "src/meteora-config-policy.ts",
+      "bytes": 2354,
+      "sha256": "6771b24d10cecb60a7ae05bc3e299698441e7ea6c9ebb2c249be5dfba71ee275"
+    },
+    {
+      "path": "src/business-live-policy.ts",
+      "bytes": 1370,
+      "sha256": "9b11621816581a0a01e8b25ef3d4169b0ef4a007ef7d3be002da419ec62886eb"
+    },
+    {
+      "path": "src/registered-fee-policy.ts",
+      "bytes": 3808,
+      "sha256": "970a085f115d5cf13cd1a14e5e138b8cccf7075d7fc1a2be46e19ac782bf1540"
+    },
+    {
+      "path": "src/fee-accounting.ts",
+      "bytes": 4178,
+      "sha256": "3ec82f2dc748a3d8cf3e6aa2ac8e61bd5f6e5973921262eb352ea8519aaf9bd8"
+    },
+    {
+      "path": "src/place-fees-live.ts",
+      "bytes": 5533,
+      "sha256": "bebb4c22beb355e941cd365b424e954bae6ccda1ac7312818f68e66b60646b98"
+    },
+    {
+      "path": "src/place-fees-reader.ts",
+      "bytes": 4552,
+      "sha256": "088c2bddcc1f11cf4c5855a5c0de80d337b87c81e7b5e77edcd75290f1b0fc02"
+    },
+    {
+      "path": "tests/dbc-launch.test.ts",
+      "bytes": 4550,
+      "sha256": "f71fe4031a16f9776a324d2ea0b81f7b9d3f09bbebeae53537470b7254c54a3f"
+    },
+    {
+      "path": "tests/fee-allocation.test.ts",
+      "bytes": 2967,
+      "sha256": "11e71285074ef4fc02761947c4fbbec92fd93b64bdad47d806a5d18c9774e15a"
+    },
+    {
+      "path": "tests/place-fees-reader.test.ts",
+      "bytes": 3633,
+      "sha256": "f0b12a0f42de6540fa2777d3274db647c577d9aa913742660cdfaed4fe0ef396"
+    },
+    {
+      "path": "tests/place-fees.test.ts",
+      "bytes": 6847,
+      "sha256": "b91eaf01b42e67bd3c50a1b055557ee6ad905a8a6147d53fc8ad7d342775eddd"
+    },
+    {
+      "path": "tests/helpers/synthetic-sdk-config.ts",
+      "bytes": 5490,
+      "sha256": "59038792fcb63d3efe0bf698c27517d238a4aff449c6f8a53f2e5c9a73bb9977"
+    },
+    {
+      "path": "vendor/bigint-buffer/index.cjs",
+      "bytes": 1434,
+      "sha256": "54fc511545ebd5402b77dd866f7b470f4151b48081a1ae468da76f755ac4a8ea"
+    },
+    {
+      "path": "vendor/bigint-buffer/index.d.ts",
+      "bytes": 267,
+      "sha256": "56421f71f739f00f0adebb277e21bd648fdaf6c6c1fe6d16889e9903b86f2325"
+    },
+    {
+      "path": "vendor/bigint-buffer/package.json",
+      "bytes": 203,
+      "sha256": "a5e8c52c24551e8091fa06f5c1bf8e7c98dbbbf3f3229529d285522ecca99725"
+    }
+  ]
+}

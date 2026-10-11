@@ -1,0 +1,20 @@
+{
+  "name": "market-launchpad-jury-review",
+  "version": "2026.10.11",
+  "private": true,
+  "type": "module",
+  "description": "Selected Market.Launchpad DBC integration and exact place-fee accounting for review",
+  "engines": {"node": ">=22.18.0"},
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@meteora-ag/dynamic-bonding-curve-sdk": "1.5.13",
+    "@solana/spl-token": "0.4.15",
+    "@solana/web3.js": "1.99.0",
+    "bn.js": "5.2.5"
+  },
+  "devDependencies": {"typescript": "5.9.3", "@types/node": "26.6.2", "@types/bn.js": "5.2.0"},
+  "overrides": {"bigint-buffer": "file:vendor/bigint-buffer", "rpc-websockets": "9.3.8", "uuid": "11.1.1"}
+}
